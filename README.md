@@ -1,5 +1,7 @@
 # input-attribute
 
+The content of the App is the same as in this [CodeSandbox Example](https://codesandbox.io/s/preact-render-to-string-test-with-inputs-bdis2?file=/src/index.js:203-734), but in the prerenderd [index.html file](https://github.com/roydigerhund/input-attribute/blob/main/build/index.html) the attribute `type="text"` attribute is missing
+
 ## CLI Commands
 *   `npm install`: Installs dependencies
 

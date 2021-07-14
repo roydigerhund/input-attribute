@@ -1,21 +1,28 @@
 import { FunctionalComponent, h } from 'preact';
-import { Route, Router } from 'preact-router';
+import { useState } from 'preact/hooks';
 
-import Home from '../routes/home';
-import Profile from '../routes/profile';
-import NotFoundPage from '../routes/notfound';
-import Header from './header';
 
 const App: FunctionalComponent = () => {
+    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     return (
-        <div id="preact_root">
-            <Header />
-            <Router>
-                <Route path="/" component={Home} />
-                <Route path="/profile/" component={Profile} user="me" />
-                <Route path="/profile/:user" component={Profile} />
-                <NotFoundPage default />
-            </Router>
+        <div>
+            <input
+                type="email"
+                class="test-class"
+                name="email"
+                value={email}
+                onInput={(e) => setEmail(e.currentTarget.value)}
+                placeholder="Email"
+            />
+            <input
+                type="text"
+                class="test-class"
+                name="username"
+                value={username}
+                onInput={(e) => setUsername(e.currentTarget.value)}
+                placeholder="Username"
+            />
         </div>
     );
 };
